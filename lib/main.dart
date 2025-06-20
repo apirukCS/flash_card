@@ -1,0 +1,104 @@
+import 'dart:convert';
+import 'dart:developer';
+import 'dart:io';
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flash_card/core/functions/app_fn.dart';
+import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';
+import 'package:flash_card/data/models/vocabulary_model.dart';
+import 'package:flash_card/presentation/pages/home/home_page.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  importVocabulariesFromAssets();
+  await Firebase.initializeApp();
+  settingNotiFication();
+  listenerNotification();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 212, 224, 245),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+Future<void> importVocabulariesFromAssets() async {
+  final String data = await rootBundle.loadString('assets/vocabularies.json');
+  final List<dynamic> jsonResult = jsonDecode(data);
+  final dao = VocabularyDao();
+
+  for (final item in jsonResult) {
+    final vocab = VocabularyModel.fromJson(item);
+    await dao.insertVocabulary(vocab);
+  }
+}
+
+//---------- firebase notification section ---------//
+listenerNotification() async {
+  if (Platform.isAndroid) {
+    await FirebaseMessaging.instance.setAutoInitEnabled(true);
+  }
+
+  final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
+
+  await firebaseMessaging.requestPermission();
+  await getToken();
+
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    if (message.notification != null) {
+      var title = message.notification?.title ?? "";
+      var description = message.notification?.body ?? "";
+      AppFn().showSimpleNotification(title, description);
+    }
+  });
+  FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+    print('Message clicked! ${message.messageId}');
+  });
+}
+
+getToken() async {
+  try {
+    var token = await FirebaseMessaging.instance.getToken();
+    log("token $token");
+    print("token $token");
+  } catch (e) {
+    log("getToken Error $e");
+  }
+}
+
+settingNotiFication() async {
+  final flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  final initSettingsAndroid = AndroidInitializationSettings(
+    '@mipmap/ic_launcher',
+  );
+
+  InitializationSettings initializationSettings = InitializationSettings(
+    android: initSettingsAndroid,
+    // iOS: initializationSettingsIOS,
+  );
+
+  await flutterLocalNotificationsPlugin.initialize(
+    initializationSettings,
+    onDidReceiveNotificationResponse: (NotificationResponse response) {
+      print('Notification clicked with payload: ${response.payload}');
+    },
+  );
+}
+
+//---------- end firebase notification section ---------//

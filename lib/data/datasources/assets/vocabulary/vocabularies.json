@@ -1,0 +1,365 @@
+[
+  {
+    "id": 1,
+    "level_id": 1,
+    "front_text": "abandon",
+    "back_text": "ละทิ้ง",
+    "pronunciation": "uh·ban·don",
+    "example_sentence": "He had to abandon the plan.",
+    "difficulty": 1
+  },
+  {
+    "id": 2,
+    "level_id": 1,
+    "front_text": "ability",
+    "back_text": "ความสามารถ",
+    "pronunciation": "uh·bil·uh·tee",
+    "example_sentence": "She has the ability to learn quickly.",
+    "difficulty": 1
+  },
+  {
+    "id": 3,
+    "level_id": 1,
+    "front_text": "access",
+    "back_text": "การเข้าถึง",
+    "pronunciation": "ak·ses",
+    "example_sentence": "You need a password to access the system.",
+    "difficulty": 1
+  },
+  {
+    "id": 4,
+    "level_id": 1,
+    "front_text": "accident",
+    "back_text": "อุบัติเหตุ",
+    "pronunciation": "ak·si·dent",
+    "example_sentence": "He was injured in a car accident.",
+    "difficulty": 1
+  },
+  {
+    "id": 5,
+    "level_id": 1,
+    "front_text": "active",
+    "back_text": "กระตือรือร้น",
+    "pronunciation": "ak·tiv",
+    "example_sentence": "She is very active in sports.",
+    "difficulty": 1
+  },
+  {
+    "id": 6,
+    "level_id": 1,
+    "front_text": "address",
+    "back_text": "ที่อยู่",
+    "pronunciation": "uh·dres",
+    "example_sentence": "Please write your address here.",
+    "difficulty": 1
+  },
+  {
+    "id": 7,
+    "level_id": 1,
+    "front_text": "advice",
+    "back_text": "คำแนะนำ",
+    "pronunciation": "ad·vais",
+    "example_sentence": "He gave me some good advice.",
+    "difficulty": 1
+  },
+  {
+    "id": 8,
+    "level_id": 1,
+    "front_text": "afraid",
+    "back_text": "กลัว",
+    "pronunciation": "uh·freid",
+    "example_sentence": "She was afraid of the dark.",
+    "difficulty": 1
+  },
+  {
+    "id": 9,
+    "level_id": 1,
+    "front_text": "agree",
+    "back_text": "เห็นด้วย",
+    "pronunciation": "uh·grii",
+    "example_sentence": "I agree with your opinion.",
+    "difficulty": 1
+  },
+  {
+    "id": 10,
+    "level_id": 1,
+    "front_text": "angry",
+    "back_text": "โกรธ",
+    "pronunciation": "ang·gree",
+    "example_sentence": "He was angry about the delay.",
+    "difficulty": 1
+  },
+
+  {
+    "id": 11,
+    "level_id": 2,
+    "front_text": "balance",
+    "back_text": "ความสมดุล",
+    "pronunciation": "bal·uhns",
+    "example_sentence": "She lost her balance and fell.",
+    "difficulty": 2
+  },
+  {
+    "id": 12,
+    "level_id": 2,
+    "front_text": "behavior",
+    "back_text": "พฤติกรรม",
+    "pronunciation": "bih·hey·vyer",
+    "example_sentence": "His behavior was unacceptable.",
+    "difficulty": 2
+  },
+  {
+    "id": 13,
+    "level_id": 2,
+    "front_text": "benefit",
+    "back_text": "ผลประโยชน์",
+    "pronunciation": "ben·uh·fit",
+    "example_sentence": "The new policy has many benefits.",
+    "difficulty": 2
+  },
+  {
+    "id": 14,
+    "level_id": 2,
+    "front_text": "challenge",
+    "back_text": "ความท้าทาย",
+    "pronunciation": "chal·uhnj",
+    "example_sentence": "She faced many challenges at work.",
+    "difficulty": 2
+  },
+  {
+    "id": 15,
+    "level_id": 2,
+    "front_text": "compare",
+    "back_text": "เปรียบเทียบ",
+    "pronunciation": "kuhm·pair",
+    "example_sentence": "Compare these two products.",
+    "difficulty": 2
+  },
+  {
+    "id": 16,
+    "level_id": 2,
+    "front_text": "concern",
+    "back_text": "ความกังวล",
+    "pronunciation": "kuhn·surn",
+    "example_sentence": "The news caused concern among citizens.",
+    "difficulty": 2
+  },
+  {
+    "id": 17,
+    "level_id": 2,
+    "front_text": "consider",
+    "back_text": "พิจารณา",
+    "pronunciation": "kuhn·sid·er",
+    "example_sentence": "Please consider my suggestion.",
+    "difficulty": 2
+  },
+  {
+    "id": 18,
+    "level_id": 2,
+    "front_text": "contain",
+    "back_text": "บรรจุ",
+    "pronunciation": "kuhn·teyn",
+    "example_sentence": "The box contains old books.",
+    "difficulty": 2
+  },
+  {
+    "id": 19,
+    "level_id": 2,
+    "front_text": "create",
+    "back_text": "สร้าง",
+    "pronunciation": "kree·eyt",
+    "example_sentence": "They create new software.",
+    "difficulty": 2
+  },
+  {
+    "id": 20,
+    "level_id": 2,
+    "front_text": "culture",
+    "back_text": "วัฒนธรรม",
+    "pronunciation": "kuhl·cher",
+    "example_sentence": "We should respect other cultures.",
+    "difficulty": 2
+  },
+
+  {
+    "id": 21,
+    "level_id": 3,
+    "front_text": "analyze",
+    "back_text": "วิเคราะห์",
+    "pronunciation": "an·uh·laiz",
+    "example_sentence": "Scientists analyze the data.",
+    "difficulty": 3
+  },
+  {
+    "id": 22,
+    "level_id": 3,
+    "front_text": "apply",
+    "back_text": "สมัคร, ประยุกต์ใช้",
+    "pronunciation": "uh·plai",
+    "example_sentence": "You can apply for the job.",
+    "difficulty": 3
+  },
+  {
+    "id": 23,
+    "level_id": 3,
+    "front_text": "approach",
+    "back_text": "เข้าหา, วิธีการ",
+    "pronunciation": "uh·prohch",
+    "example_sentence": "We need a new approach.",
+    "difficulty": 3
+  },
+  {
+    "id": 24,
+    "level_id": 3,
+    "front_text": "arrange",
+    "back_text": "จัดเตรียม",
+    "pronunciation": "uh·reynj",
+    "example_sentence": "She arranged the meeting.",
+    "difficulty": 3
+  },
+  {
+    "id": 25,
+    "level_id": 3,
+    "front_text": "assume",
+    "back_text": "สันนิษฐาน",
+    "pronunciation": "uh·soom",
+    "example_sentence": "Don't assume anything.",
+    "difficulty": 3
+  },
+  {
+    "id": 26,
+    "level_id": 3,
+    "front_text": "attempt",
+    "back_text": "พยายาม",
+    "pronunciation": "uh·tempt",
+    "example_sentence": "He made an attempt to help.",
+    "difficulty": 3
+  },
+  {
+    "id": 27,
+    "level_id": 3,
+    "front_text": "avoid",
+    "back_text": "หลีกเลี่ยง",
+    "pronunciation": "uh·void",
+    "example_sentence": "Try to avoid mistakes.",
+    "difficulty": 3
+  },
+  {
+    "id": 28,
+    "level_id": 3,
+    "front_text": "aware",
+    "back_text": "ตระหนัก",
+    "pronunciation": "uh·wair",
+    "example_sentence": "Be aware of the risks.",
+    "difficulty": 3
+  },
+  {
+    "id": 29,
+    "level_id": 3,
+    "front_text": "basic",
+    "back_text": "พื้นฐาน",
+    "pronunciation": "bey·sik",
+    "example_sentence": "Learn the basic skills first.",
+    "difficulty": 3
+  },
+  {
+    "id": 30,
+    "level_id": 3,
+    "front_text": "cause",
+    "back_text": "สาเหตุ",
+    "pronunciation": "kawz",
+    "example_sentence": "Smoking is a cause of disease.",
+    "difficulty": 3
+  },
+
+  {
+    "id": 31,
+    "level_id": 4,
+    "front_text": "acquire",
+    "back_text": "ได้รับ",
+    "pronunciation": "uh·kwai·er",
+    "example_sentence": "She acquired new skills.",
+    "difficulty": 4
+  },
+  {
+    "id": 32,
+    "level_id": 4,
+    "front_text": "adapt",
+    "back_text": "ปรับตัว",
+    "pronunciation": "uh·dapt",
+    "example_sentence": "Animals adapt to their environment.",
+    "difficulty": 4
+  },
+  {
+    "id": 33,
+    "level_id": 4,
+    "front_text": "anticipate",
+    "back_text": "คาดการณ์",
+    "pronunciation": "an·tis·uh·peyt",
+    "example_sentence": "We anticipate a good result.",
+    "difficulty": 4
+  },
+  {
+    "id": 34,
+    "level_id": 4,
+    "front_text": "appropriate",
+    "back_text": "เหมาะสม",
+    "pronunciation": "uh·proh·pree·eyt",
+    "example_sentence": "Use appropriate language.",
+    "difficulty": 4
+  },
+  {
+    "id": 35,
+    "level_id": 4,
+    "front_text": "assess",
+    "back_text": "ประเมิน",
+    "pronunciation": "uh·ses",
+    "example_sentence": "We need to assess the damage.",
+    "difficulty": 4
+  },
+  {
+    "id": 36,
+    "level_id": 4,
+    "front_text": "collapse",
+    "back_text": "พังทลาย",
+    "pronunciation": "kuh·laps",
+    "example_sentence": "The building collapsed after the earthquake.",
+    "difficulty": 4
+  },
+  {
+    "id": 37,
+    "level_id": 4,
+    "front_text": "consequence",
+    "back_text": "ผลที่ตามมา",
+    "pronunciation": "kon·si·kwens",
+    "example_sentence": "Every action has a consequence.",
+    "difficulty": 4
+  },
+  {
+    "id": 38,
+    "level_id": 4,
+    "front_text": "contribute",
+    "back_text": "มีส่วนร่วม",
+    "pronunciation": "kon·tri·byoot",
+    "example_sentence": "They contribute to charity.",
+    "difficulty": 4
+  },
+  {
+    "id": 39,
+    "level_id": 4,
+    "front_text": "demonstrate",
+    "back_text": "สาธิต",
+    "pronunciation": "dem·un·streyt",
+    "example_sentence": "He demonstrated the new product.",
+    "difficulty": 4
+  },
+  {
+    "id": 40,
+    "level_id": 4,
+    "front_text": "determine",
+    "back_text": "กำหนด, ตัดสินใจ",
+    "pronunciation": "di·tur·min",
+    "example_sentence": "We must determine the cause.",
+    "difficulty": 4
+  }
+]

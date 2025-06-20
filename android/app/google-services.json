@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "978443228990",
+    "project_id": "rise-test-1a806",
+    "storage_bucket": "rise-test-1a806.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978443228990:android:f945416d4ff23327617e6f",
+        "android_client_info": {
+          "package_name": "com.example.flash_card"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClsC2epB5uncrQl2Fx6bOClruOvTClzJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
