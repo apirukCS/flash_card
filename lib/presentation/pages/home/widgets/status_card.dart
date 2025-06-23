@@ -5,12 +5,18 @@ class StatusCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(child: Container(height: 100, color: Colors.white)),
-        const SizedBox(width: 12),
-        Expanded(child: Container(height: 100, color: Colors.white)),
-      ],
+    return Row(children: [card(), const SizedBox(width: 12), card()]);
+  }
+
+  card() {
+    return Expanded(
+      child: Container(
+        height: 90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }

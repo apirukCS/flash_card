@@ -1,6 +1,6 @@
-const double smallTextSize = 12;
+const double smallTextSize = 14;
 const double normalTextSize = 16;
-const double largeTextSize = 20;
+const double largeTextSize = 18;
 
 const double smallSpace = 4;
 const double normalSpace = 8;

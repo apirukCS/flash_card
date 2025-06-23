@@ -1,6 +1,9 @@
+import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flash_card/presentation/pages/home/widgets/daily_challenge_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/level_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/status_card.dart';
+import 'package:flash_card/presentation/widgets/texts/app_large_text.dart';
+import 'package:flash_card/presentation/widgets/texts/app_text.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,25 +33,53 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text('FlashCard'), Text('test')],
+                    children: [
+                      Text(
+                        'FlashCard',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      AppText(
+                        text: 'เรียนรู้คำศัพท์ได้ง่าย',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ],
                   ),
-                  Icon(Icons.abc),
+                  Icon(Icons.local_activity_sharp),
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: largeSpace * 2 - normalSpace),
               StatusCard(),
-              const SizedBox(height: 16),
+              SizedBox(height: largeSpace * 2 - normalSpace),
               DailyChallengeCard(),
-              const SizedBox(height: 8),
-              Text('Cards', style: TextStyle(fontSize: 20)),
-              const SizedBox(height: 8),
-              LevelCard(),
-              const SizedBox(height: 8),
-              LevelCard(),
-              const SizedBox(height: 8),
-              LevelCard(),
-              const SizedBox(height: 8),
-              LevelCard(),
+              SizedBox(height: normalSpace * 3),
+              AppLargeText(text: 'ระดับการเรียน', isBold: true),
+              SizedBox(height: largeSpace),
+              LevelCard(
+                progress: 80,
+                title: "ระดับเริ่มต้น ⭐️",
+                detail: "ความก้าวหน้า",
+              ),
+              SizedBox(height: smallSpace * 3),
+              LevelCard(
+                progress: 20,
+                title: "ระดับพื้นฐาน",
+                detail: "ความก้าวหน้า",
+              ),
+              const SizedBox(height: smallSpace * 3),
+              LevelCard(
+                progress: 0,
+                title: "ระดับกลาง 🔒",
+                detail: "ความก้าวหน้า",
+              ),
+              const SizedBox(height: smallSpace * 3),
+              LevelCard(
+                progress: 0,
+                title: "ระดับสูง 🔒",
+                detail: "ความก้าวหน้า",
+              ),
             ],
           ),
         ),

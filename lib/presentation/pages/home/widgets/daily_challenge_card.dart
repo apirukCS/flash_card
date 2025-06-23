@@ -1,3 +1,5 @@
+import 'package:flash_card/presentation/widgets/texts/app_large_text.dart';
+import 'package:flash_card/presentation/widgets/texts/app_text.dart';
 import 'package:flutter/material.dart';
 
 class DailyChallengeCard extends StatelessWidget {
@@ -7,24 +9,44 @@ class DailyChallengeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16),
-      color: Colors.lightBlue,
-      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [Theme.of(context).primaryColor, Colors.purple.shade200],
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Daily Challenge",
-                style: TextStyle(fontSize: 22, color: Colors.white),
+              AppLargeText(
+                text: "Daily Challenge",
+                color: Colors.white,
+                isBold: true,
               ),
-              Text(
-                "ทำแบบทดสอบ 5 คำวันนี้",
-                style: TextStyle(color: Colors.white),
-              ),
+              AppText(text: "ทำแบบทดสอบ 5 คำวันนี้", color: Colors.white),
             ],
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Test")),
+          // ElevatedButton(onPressed: () {}, child: Text("Test")),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              backgroundColor: Colors.purple.shade200,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            ),
+            child: AppText(
+              text: "เริ่มเลย!",
+              color: Colors.white,
+              isBold: true,
+            ),
+          ),
         ],
       ),
     );
