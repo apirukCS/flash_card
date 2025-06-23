@@ -9,7 +9,8 @@ import 'package:flash_card/core/functions/notification_fn.dart';
 import 'package:flash_card/core/utils/app_dependency_injector.dart';
 import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';
 import 'package:flash_card/data/models/vocabulary_model.dart';
-import 'package:flash_card/presentation/pages/space_x/capsule_main_menu.dart';
+import 'package:flash_card/presentation/pages/space_x/space_x_main_menu.dart';
+import 'package:flash_card/presentation/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -32,10 +33,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       onGenerateRoute: AppRouter.generateRoute,
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 212, 224, 245),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: AppColors.backgroundBodyColor,
+        primaryColor: AppColors.primaryColor,
       ),
-      home: CapsuleMainMenu(),
+      home: SpaceXMainMenu(),
     );
   }
 }

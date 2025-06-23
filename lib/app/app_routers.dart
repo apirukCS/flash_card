@@ -1,5 +1,5 @@
 import 'package:flash_card/presentation/pages/space_x/capsule/capsule_page.dart';
-import 'package:flash_card/presentation/pages/space_x/capsule_main_menu.dart';
+import 'package:flash_card/presentation/pages/space_x/space_x_main_menu.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -10,7 +10,7 @@ class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case mainMenuSpaceX:
-        return MaterialPageRoute(builder: (_) => CapsuleMainMenu());
+        return MaterialPageRoute(builder: (_) => SpaceXMainMenu());
 
       case capsule:
         return MaterialPageRoute(builder: (_) => CapsulePage());
