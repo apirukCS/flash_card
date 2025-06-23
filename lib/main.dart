@@ -4,10 +4,12 @@ import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flash_card/core/functions/app_fn.dart';
+import 'package:flash_card/app/app_routers.dart';
+import 'package:flash_card/core/functions/notification_fn.dart';
+import 'package:flash_card/core/utils/app_dependency_injector.dart';
 import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';
 import 'package:flash_card/data/models/vocabulary_model.dart';
-import 'package:flash_card/presentation/pages/home/home_page.dart';
+import 'package:flash_card/presentation/pages/space_x/capsule_main_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -18,7 +20,7 @@ Future<void> main() async {
   await Firebase.initializeApp();
   settingNotiFication();
   listenerNotification();
-  runApp(const MyApp());
+  runApp(AppDependencyInjector(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -28,11 +30,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      onGenerateRoute: AppRouter.generateRoute,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromARGB(255, 212, 224, 245),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomePage(),
+      home: CapsuleMainMenu(),
     );
   }
 }
@@ -63,7 +66,7 @@ listenerNotification() async {
     if (message.notification != null) {
       var title = message.notification?.title ?? "";
       var description = message.notification?.body ?? "";
-      AppFn().showSimpleNotification(title, description);
+      NotificationFN.showSimpleNotification(title, description);
     }
   });
   FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {

@@ -1,3 +1,4 @@
+import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flutter/material.dart';
 
 class AppLargeText extends StatelessWidget {
@@ -7,6 +8,6 @@ class AppLargeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,style: TextStyle(),);
+    return Text(text, style: TextStyle(fontSize: largeTextSize));
   }
 }

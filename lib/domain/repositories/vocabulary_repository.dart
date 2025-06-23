@@ -4,6 +4,5 @@ abstract class VocabularyRepository {
   Future<List<VocabularyModel>> getVocabulariesByLevel(int levelId);
   Future<VocabularyModel> getVocabularyById(int id);
   Future<List<VocabularyModel>> getRandomVocabularies(int count);
-
   Future<void> updateVocabularyProgress(int vocabularyId, bool isMemorized);
 }

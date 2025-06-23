@@ -17,7 +17,6 @@ class LevelCard extends StatelessWidget {
                 children: [
                   Text("Test", style: TextStyle(fontSize: 20)),
                   Text("details"),
-                  
                 ],
               ),
             ),
