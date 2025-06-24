@@ -1,7 +1,7 @@
 enum LevelVocabEnum { beginner, basic, medium, expert }
 
 extension ParseToString on LevelVocabEnum {
-  int name() {
+  int id() {
     String type = toString().split('.').last;
     switch (type) {
       case "beginner":
@@ -13,7 +13,22 @@ extension ParseToString on LevelVocabEnum {
       case "expert":
         return 4;
       default:
-        return LevelVocabEnum.beginner.name();
+        return LevelVocabEnum.beginner.id();
     }
   }
 }
+
+  LevelVocabEnum levelVocabIdToEnum(int id) {
+    switch (id) {
+      case 1:
+        return LevelVocabEnum.beginner;
+      case 2:
+        return LevelVocabEnum.basic;
+      case 3:
+        return LevelVocabEnum.medium;
+      case 4:
+        return LevelVocabEnum.expert;
+      default:
+        return LevelVocabEnum.beginner;
+    }
+  }

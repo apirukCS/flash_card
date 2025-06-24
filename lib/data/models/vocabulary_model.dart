@@ -6,7 +6,7 @@ class VocabularyModel {
   final String? pronunciation;
   final String? exampleSentence;
   final int difficulty;
-  final DateTime createdAt;
+  // final DateTime createdAt;
 
   const VocabularyModel({
     required this.id,
@@ -16,7 +16,7 @@ class VocabularyModel {
     this.pronunciation,
     this.exampleSentence,
     this.difficulty = 1,
-    required this.createdAt,
+    // required this.createdAt,
   });
 
   factory VocabularyModel.fromJson(Map<String, dynamic> json) {
@@ -28,7 +28,7 @@ class VocabularyModel {
       pronunciation: json['pronunciation'],
       exampleSentence: json['example_sentence'],
       difficulty: json['difficulty'] ?? 1,
-      createdAt: DateTime.parse(json['created_at']),
+      // createdAt: DateTime.parse(json['created_at']),
     );
   }
 
@@ -41,7 +41,7 @@ class VocabularyModel {
       'pronunciation': pronunciation,
       'example_sentence': exampleSentence,
       'difficulty': difficulty,
-      'created_at': createdAt.toIso8601String(),
+      // 'created_at': createdAt.toIso8601String(),
     };
   }
 }

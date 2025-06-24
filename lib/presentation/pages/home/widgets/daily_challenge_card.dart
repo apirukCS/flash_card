@@ -1,3 +1,4 @@
+import 'package:flash_card/presentation/widgets/buttons/app_button.dart';
 import 'package:flash_card/presentation/widgets/texts/app_large_text.dart';
 import 'package:flash_card/presentation/widgets/texts/app_text.dart';
 import 'package:flutter/material.dart';
@@ -32,21 +33,7 @@ class DailyChallengeCard extends StatelessWidget {
             ],
           ),
           // ElevatedButton(onPressed: () {}, child: Text("Test")),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              backgroundColor: Colors.purple.shade200,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            ),
-            child: AppText(
-              text: "เริ่มเลย!",
-              color: Colors.white,
-              isBold: true,
-            ),
-          ),
+          AppButton(text: "เริ่มเลย!",onTap: (){},),
         ],
       ),
     );

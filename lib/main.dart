@@ -7,6 +7,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flash_card/app/app_routers.dart';
 import 'package:flash_card/core/functions/notification_fn.dart';
 import 'package:flash_card/core/utils/app_dependency_injector.dart';
+import 'package:flash_card/data/datasources/local/database_helper.dart';
 import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';
 import 'package:flash_card/data/models/vocabulary_model.dart';
 import 'package:flash_card/presentation/pages/home/home_page.dart';
@@ -42,7 +43,10 @@ class MyApp extends StatelessWidget {
 }
 
 Future<void> importVocabulariesFromAssets() async {
-  final String data = await rootBundle.loadString('assets/vocabularies.json');
+  final db = await DatabaseHelper().database;
+  await db.delete('vocabularies');
+
+  final String data = await rootBundle.loadString('assets/vocabulary/vocabularies.json');
   final List<dynamic> jsonResult = jsonDecode(data);
   final dao = VocabularyDao();
 

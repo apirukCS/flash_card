@@ -38,7 +38,7 @@ class DatabaseHelper {
         pronunciation TEXT,
         example_sentence TEXT,
         difficulty INTEGER DEFAULT 1,
-        created_at TEXT NOT NULL
+        created_at TEXT
       )
     ''');
 

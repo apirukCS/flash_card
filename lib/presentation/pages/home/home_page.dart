@@ -1,4 +1,6 @@
+import 'package:flash_card/app/app_routers.dart';
 import 'package:flash_card/core/constants/app_variables.dart';
+import 'package:flash_card/core/enums/level_vocab_enum.dart';
 import 'package:flash_card/presentation/pages/home/widgets/daily_challenge_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/level_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/status_card.dart';
@@ -61,24 +63,28 @@ class _HomePageState extends State<HomePage> {
                 progress: 80,
                 title: "ระดับเริ่มต้น ⭐️",
                 detail: "ความก้าวหน้า",
+                levelVocab: LevelVocabEnum.beginner,
               ),
               SizedBox(height: smallSpace * 3),
               LevelCard(
                 progress: 20,
                 title: "ระดับพื้นฐาน",
                 detail: "ความก้าวหน้า",
+                levelVocab: LevelVocabEnum.basic,
               ),
               const SizedBox(height: smallSpace * 3),
               LevelCard(
                 progress: 0,
                 title: "ระดับกลาง 🔒",
                 detail: "ความก้าวหน้า",
+                levelVocab: LevelVocabEnum.medium,
               ),
               const SizedBox(height: smallSpace * 3),
               LevelCard(
                 progress: 0,
                 title: "ระดับสูง 🔒",
                 detail: "ความก้าวหน้า",
+                levelVocab: LevelVocabEnum.expert,
               ),
             ],
           ),
