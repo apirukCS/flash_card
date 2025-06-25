@@ -7,8 +7,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flash_card/app/app_routers.dart';
 import 'package:flash_card/core/functions/notification_fn.dart';
 import 'package:flash_card/core/utils/app_dependency_injector.dart';
-import 'package:flash_card/data/datasources/local/database_helper.dart';
 import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';
+import 'package:flash_card/data/models/choice_model.dart';
 import 'package:flash_card/data/models/vocabulary_model.dart';
 import 'package:flash_card/presentation/pages/home/home_page.dart';
 import 'package:flash_card/presentation/resources/app_colors.dart';
@@ -43,16 +43,25 @@ class MyApp extends StatelessWidget {
 }
 
 Future<void> importVocabulariesFromAssets() async {
-  final db = await DatabaseHelper().database;
-  await db.delete('vocabularies');
-
-  final String data = await rootBundle.loadString('assets/vocabulary/vocabularies.json');
-  final List<dynamic> jsonResult = jsonDecode(data);
   final dao = VocabularyDao();
 
-  for (final item in jsonResult) {
+  final String vocabularies = await rootBundle.loadString(
+    'assets/vocabulary/vocabularies.json',
+  );
+  final List<dynamic> vocabResults = jsonDecode(vocabularies);
+
+  for (final item in vocabResults) {
     final vocab = VocabularyModel.fromJson(item);
     await dao.insertVocabulary(vocab);
+  }
+
+  final String choices = await rootBundle.loadString(
+    'assets/vocabulary/choices.json',
+  );
+  final List<dynamic> choiceResults = jsonDecode(choices);
+  for (final item in choiceResults) {
+    final vocab = ChoiceModel.fromJson(item);
+    await dao.insertChoice(vocab);
   }
 }
 

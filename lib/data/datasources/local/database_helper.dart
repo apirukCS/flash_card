@@ -21,11 +21,7 @@ class DatabaseHelper {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentsDirectory.path, 'flashcard.db');
 
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _onCreate,
-    );
+    return await openDatabase(path, version: 1, onCreate: _onCreate);
   }
 
   Future<void> _onCreate(Database db, int version) async {
@@ -54,6 +50,25 @@ class DatabaseHelper {
         difficulty_level INTEGER DEFAULT 1,
         streak_count INTEGER DEFAULT 0,
         UNIQUE(vocabulary_id, user_id)
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE choices (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        vocabulary_id INTEGER NOT NULL,
+        text TEXT NOT NULL,
+        FOREIGN KEY (vocabulary_id) REFERENCES vocabularies(id) ON DELETE CASCADE
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE quiz_answers (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        vocabulary_id INTEGER NOT NULL,
+        choice_id INTEGER NOT NULL,
+        FOREIGN KEY (choice_id) REFERENCES choices(id) ON DELETE CASCADE,
+        FOREIGN KEY (vocabulary_id) REFERENCES vocabularies(id) ON DELETE CASCADE
       )
     ''');
   }

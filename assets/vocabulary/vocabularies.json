@@ -2,7 +2,7 @@
   {
     "id": 1,
     "level_id": 1,
-    "front_text": "abandon",
+    "front_text": "Abandon",
     "back_text": "ละทิ้ง",
     "pronunciation": "uh·ban·don",
     "example_sentence": "He had to abandon the plan.",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "level_id": 1,
-    "front_text": "ability",
+    "front_text": "Ability",
     "back_text": "ความสามารถ",
     "pronunciation": "uh·bil·uh·tee",
     "example_sentence": "She has the ability to learn quickly.",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "level_id": 1,
-    "front_text": "access",
+    "front_text": "Access",
     "back_text": "การเข้าถึง",
     "pronunciation": "ak·ses",
     "example_sentence": "You need a password to access the system.",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "level_id": 1,
-    "front_text": "accident",
+    "front_text": "Accident",
     "back_text": "อุบัติเหตุ",
     "pronunciation": "ak·si·dent",
     "example_sentence": "He was injured in a car accident.",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "level_id": 1,
-    "front_text": "active",
+    "front_text": "Active",
     "back_text": "กระตือรือร้น",
     "pronunciation": "ak·tiv",
     "example_sentence": "She is very active in sports.",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "level_id": 1,
-    "front_text": "address",
+    "front_text": "Address",
     "back_text": "ที่อยู่",
     "pronunciation": "uh·dres",
     "example_sentence": "Please write your address here.",
@@ -56,7 +56,7 @@
   {
     "id": 7,
     "level_id": 1,
-    "front_text": "advice",
+    "front_text": "Advice",
     "back_text": "คำแนะนำ",
     "pronunciation": "ad·vais",
     "example_sentence": "He gave me some good advice.",
@@ -338,7 +338,7 @@
   {
     "id": 38,
     "level_id": 4,
-    "front_text": "contribute",
+    "front_text": "Contribute",
     "back_text": "มีส่วนร่วม",
     "pronunciation": "kon·tri·byoot",
     "example_sentence": "They contribute to charity.",
@@ -347,7 +347,7 @@
   {
     "id": 39,
     "level_id": 4,
-    "front_text": "demonstrate",
+    "front_text": "Demonstrate",
     "back_text": "สาธิต",
     "pronunciation": "dem·un·streyt",
     "example_sentence": "He demonstrated the new product.",
@@ -356,7 +356,7 @@
   {
     "id": 40,
     "level_id": 4,
-    "front_text": "determine",
+    "front_text": "Determine",
     "back_text": "กำหนด, ตัดสินใจ",
     "pronunciation": "di·tur·min",
     "example_sentence": "We must determine the cause.",

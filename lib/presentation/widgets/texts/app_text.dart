@@ -1,3 +1,4 @@
+import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flutter/material.dart';
 
 class AppText extends StatelessWidget {
@@ -23,7 +24,7 @@ class AppText extends StatelessWidget {
       style: TextStyle(
         fontWeight: fontWeight ?? (isBold == true ? FontWeight.bold : null),
         color: color,
-        fontSize: fontSize,
+        fontSize: fontSize ?? normalTextSize,
       ),
     );
   }

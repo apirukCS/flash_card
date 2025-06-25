@@ -1,9 +1,11 @@
-import 'package:flash_card/app/app_routers.dart';
+import 'dart:developer';
+
 import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flash_card/core/enums/level_vocab_enum.dart';
 import 'package:flash_card/presentation/pages/home/widgets/daily_challenge_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/level_card.dart';
 import 'package:flash_card/presentation/pages/home/widgets/status_card.dart';
+import 'package:flash_card/presentation/resources/app_colors.dart';
 import 'package:flash_card/presentation/widgets/texts/app_large_text.dart';
 import 'package:flash_card/presentation/widgets/texts/app_text.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +51,12 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  Icon(Icons.local_activity_sharp),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: Image.asset("assets/images/cat.gif", width: 90),
+                  ),
                 ],
               ),
               const SizedBox(height: largeSpace * 2 - normalSpace),

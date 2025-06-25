@@ -11,3 +11,13 @@ class UpdateCurrentIndex extends VocabularyEvent {
   final int index;
   UpdateCurrentIndex({required this.index});
 }
+
+class GetChoicesByVocabId extends VocabularyEvent {
+  final int vocabId;
+  GetChoicesByVocabId({required this.vocabId});
+}
+
+class UpdateChoiceSelected extends VocabularyEvent {
+  final ChoiceModel? choice;
+  UpdateChoiceSelected({required this.choice});
+}

@@ -15,7 +15,7 @@ class DailyChallengeCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
-          colors: [Theme.of(context).primaryColor, Colors.purple.shade200],
+          colors: [Theme.of(context).primaryColor, Colors.pink.shade300],
         ),
       ),
       child: Row(
@@ -32,8 +32,11 @@ class DailyChallengeCard extends StatelessWidget {
               AppText(text: "ทำแบบทดสอบ 5 คำวันนี้", color: Colors.white),
             ],
           ),
-          // ElevatedButton(onPressed: () {}, child: Text("Test")),
-          AppButton(text: "เริ่มเลย!",onTap: (){},),
+          AppButton(
+            text: "เริ่มเลย!",
+            onTap: () {},
+            backgroundColor: const Color.fromARGB(255, 242, 112, 156),
+          ),
         ],
       ),
     );
