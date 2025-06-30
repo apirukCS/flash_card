@@ -1,4 +1,4 @@
-import 'package:flash_card/app/app_routers.dart';
+import 'package:flash_card/core/router/app_routers.dart';
 import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flash_card/core/functions/app_fn.dart';
 import 'package:flash_card/presentation/bloc/vocabulary/vocabulary_bloc.dart';

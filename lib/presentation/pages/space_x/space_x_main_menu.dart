@@ -1,4 +1,4 @@
-import 'package:flash_card/app/app_routers.dart';
+import 'package:flash_card/core/router/app_routers.dart';
 import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flash_card/presentation/widgets/texts/app_large_text.dart';
 import 'package:flutter/material.dart';

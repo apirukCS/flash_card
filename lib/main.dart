@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flash_card/app/app_routers.dart';
+import 'package:flash_card/core/router/app_routers.dart';
 import 'package:flash_card/core/functions/notification_fn.dart';
 import 'package:flash_card/core/utils/app_dependency_injector.dart';
 import 'package:flash_card/data/datasources/local/vocalbulary_dao.dart';

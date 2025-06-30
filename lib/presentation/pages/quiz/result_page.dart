@@ -1,4 +1,4 @@
-import 'package:flash_card/app/app_routers.dart';
+import 'package:flash_card/core/router/app_routers.dart';
 import 'package:flash_card/core/constants/app_variables.dart';
 import 'package:flash_card/core/enums/level_vocab_enum.dart';
 import 'package:flash_card/presentation/pages/quiz/widgets/award_row_animation.dart';
